@@ -3,3 +3,9 @@
  .evenrow{background-color: lightgray;}
  h1{font-size: 2em;}
  h2{font-size: 1.5em;}
+ body{background-color: #222f5b;}
+ text{color: #00000;}
+ link{color: blue;}
+ nav{background-color: #5d5d5d;}
+nav a{color: blue;}
+nav a:hover{color:aliceblue ;}
