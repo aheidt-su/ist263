@@ -1,11 +1,13 @@
  body{font-family: Georgia, serif;}
- h1,h2{color: DarkSlateBlue;}
+ h1,h2{color: darkslateblue;}
  .evenrow{background-color: lightgray;}
  h1{font-size: 2em;}
  h2{font-size: 1.5em;}
- body{background-color: #222f5b;}
+ body{background-color: whitesmoke;}
  text{color: #00000;}
  link{color: blue;}
  nav{background-color: #5d5d5d;}
 nav a{color: blue;}
 nav a:hover{color:aliceblue ;}
+nav {padding: 10px;}
+nav {margin-bottom: 30px;}
