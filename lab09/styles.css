@@ -1,137 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Allen Heidt Skills</title>
-    <link rel="stylesheet" href="../lab09/styles.css">
-    <style>
-        /* Table styling */
-        table, th, td {
-            border: 1px solid blue;
-        }
-        .header {
-            text-align: center;
-        }
+ body{font-family: Georgia, serif;}
+ h1,h2{color: #483d8b;}
+ .evenrow{background-color: lightgray;}
+ h1{font-size: 2em;}
+ h2{font-size: 1.5em;}
+ body{background-color: #222f5b;}
+ text{color: #00000;}
+ link{color: #0000ff;}
+ nav{background-color: #5d5d5d;}
+nav a{color: #0000ff;}
+nav a:hover{color:#f0f8ff ;}
+nav {padding: 10px;}
+nav {margin-bottom: 30px;}
+footer {
+    clear: both; /* Ensure footer content doesn't overlap with other floated content */
+    padding: 10px;
+    position: relative;
+}
 
-        /* Flexbox for .firstrow */
-        .firstrow {
-            display: flex;
-            justify-content: center; /* Centers items horizontally */
-            align-items: center; /* Centers items vertically */
-            background-color: #5d5d5d;
-            gap: 20px; /* Space between the table and image */
-        }
+footer p {
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Ensures the elements can sit side by side */
+}
 
-        /* Table container styling */
-        .skillstable {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-        }
+footer .tagline {
+    float: right; /* Float the tag line to the right */
+    margin-left: 10px; /* Add some space between the copyright and the tagline */
+}
 
-        .skillstable table {
-            margin: 0 auto; /* Center table horizontally within its container */
-        }
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
 
-        /* Image container styling */
-        .skillsimage {
-            text-align: center;
-            flex: 1;
-        }
+/* Flexbox for rows and columns */
+.row {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    margin-bottom: 20px; /* Space between rows */
+}
 
-        .skillsimage img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto; /* Ensure image is centered horizontally */
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="https://aheidt-su.github.io/ist263/lab08/index.html">Home</a> | 
-        <a href="https://aheidt-su.github.io/ist263/lab08/skills.html">Skills</a> | 
-        <a href="https://aheidt-su.github.io/ist263/lab08/contact.html">Contact</a>
-    </nav>
+.column {
+    flex: 1; /* Each column takes equal width */
+    margin: 0 10px; /* Add space between columns */
+    background-color: #f1f1f1; /* Background color for each column */
+    padding: 15px; /* Padding inside each column */
+    border-radius: 8px; /* Rounded corners */
+}
 
-    <h1 class="header"><b>Technical Skills</b></h1>
+/* Flexbox specific rules */
+.column img {
+    max-width: 100%; /* Ensure image fits within column */
+    display: block;
+}
 
-    <div class="firstrow">
-        <div class="skillstable">
-            <table>
-                <caption><b>Allen's Skills</b></caption>
-                <tr>
-                    <th>Category</th>
-                    <th>Skill</th>
-                    <th>Competency Level</th>
-                    <th>Year Learned</th>
-                </tr>
-                <tr class="evenrow">
-                    <td>Coding</td>
-                    <td>Python</td>
-                    <td>Intermediate</td>
-                    <td>2023</td>
-                </tr>
-                <tr>
-                    <td>Coding</td>
-                    <td>Visual Basic</td>
-                    <td>Proficient</td>
-                    <td>2022</td>
-                </tr>
-                <tr class="evenrow">
-                    <td>Finance</td>
-                    <td>DCF Valuations</td>
-                    <td>Master</td>
-                    <td>2022</td>
-                </tr>
-                <tr>
-                    <td>Data</td>
-                    <td>Data Modelling</td>
-                    <td>Intermediate</td>
-                    <td>2022</td>
-                </tr>
-                <tr class="evenrow">
-                    <td>Software</td>
-                    <td>Excel</td>
-                    <td>Master</td>
-                    <td>2019</td>
-                </tr>
-                <tr>
-                    <td>Physical</td>
-                    <td>Jiu-Jitsu</td>
-                    <td>Proficient</td>
-                    <td>2021</td>
-                </tr>
-                <tr class="evenrow">
-                    <td>Software</td>
-                    <td>PowerBI</td>
-                    <td>Intermediate</td>
-                    <td>2024</td>
-                </tr>
-                <tr>
-                    <td>Physical</td>
-                    <td>Computer Construction</td>
-                    <td>Master</td>
-                    <td>2016</td>
-                </tr>
-                <tr class="evenrow">
-                    <td>Oratory</td>
-                    <td>Public Speaking</td>
-                    <td>Master</td>
-                    <td>2021</td>
-                </tr>
-                <tr>
-                    <td>ESports</td>
-                    <td>Call of Duty</td>
-                    <td>Master</td>
-                    <td>2012</td>
-                </tr>
-            </table>
-        </div>
+iframe {
+    width: 100%; /* Make the map fill the available space */
+    border-radius: 8px;
+}
 
-        <div class="skillsimage">
-            <img src="https://peopel-su.github.io/ist263/images/skill_3775447.png" alt="skills image">
-        </div>
-    </div>
-</body>
-</html>
+/* Add extra spacing for the form elements */
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="submit"] {
+    width: auto; /* Make the submit button auto-sized */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ensure form and map don't feel squished */
+.column form, .column iframe {
+    margin-top: 10px;
+}
+
+.firstrow {display: flex; background-color: aqua; justify-content: center; align-items: center; gap: 40px;}
+.skillstable table {margin: 0 auto;}
+.skillsimage {text-align: center; display: block; margin: 0 auto;}
