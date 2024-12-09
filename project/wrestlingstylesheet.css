@@ -121,7 +121,7 @@ body {
 .roster-member img {
     width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 75%;
 }
 .roster-member h4 {
     margin: 10px 0 5px;
