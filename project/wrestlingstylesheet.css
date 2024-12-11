@@ -9,6 +9,31 @@ body {
     padding: 20px;
     text-align: center;
 }
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #020c56; 
+    color: white;
+    padding: 20px;
+}
+
+.header-logo {
+    max-width: 600px; 
+    margin-right: 1px; 
+    height: auto; 
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 5rem;
+}
+
+.header-text h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
 .header h1 {
     margin: 0;
     font-size: 2rem;
@@ -132,6 +157,30 @@ body {
     font-size: 0.9rem;
     color: #555;
 }
+.roster-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.roster-members div {
+    text-align: center;
+}
+.roster-members img {
+    max-width: 150px; 
+    height: auto;
+    border-radius: 8px; 
+    display: block;
+    background-color: transparent; 
+}
+.roster-members p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #000;
+}
+
+
 .footer {
     background-color: #001e6c;
     color: white;
@@ -188,7 +237,7 @@ body {
 }
 .contact-form {
     background-color: #ff6a00;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     color: white;
 }
