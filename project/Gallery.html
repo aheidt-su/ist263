@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syracuse University Wrestling Club - Slideshow</title>
+    <link rel="stylesheet" href="wrestlingstylesheet.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        .nav a {color: black;}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #001e6c;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+            background-color: rgba(0, 30, 108, 0.7);
+        }
+
+        .next {
+            right: 0;
+            background-color: rgba(0, 30, 108, 0.7);
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 30, 108, 0.9);
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dots span {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dots .active {
+            background-color: #001e6c;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="headerimage.png" alt="Club Wrestling Logo" class="header-logo">
+        <div class="header-text">
+            <h1>Syracuse University Wrestling Club</h1>
+            <h2>Image Slideshow</h2>
+        </div>
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="slide">
+            <img src="../project/images/IMG_1222.jpg" class="slides" alt="Team Photo">
+            <div class="caption">Team Photo - 2024</div>
+        </div>
+
+        <div class="slide">
+            <img src="../project/images/IMG_1195.jpg" class="slides" alt="Action Shot">
+            <div class="caption">Action Shot</div>
+        </div>
+
+        <div class="slide">
+            <img src="../project/images/IMG_0840.jpg" class="slides" alt="Training Session">
+            <div class="caption">Training Session</div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots for navigation -->
+    <div class="dots">
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot" onclick="setSlide(3)"></span>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll(".slides");
+            const dots = document.querySelectorAll(".dot");
+
+            if (index >= slides.length) currentSlideIndex = 0;
+            if (index < 0) currentSlideIndex = slides.length - 1;
+
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === currentSlideIndex) ? "block" : "none";
+            });
+
+            dots.forEach((dot, i) => {
+                dot.className = dot.className.replace(" active", "");
+                if (i === currentSlideIndex) {
+                    dot.className += " active";
+                }
+            });
+        }
+
+        function changeSlide(step) {
+            currentSlideIndex += step;
+            showSlide(currentSlideIndex);
+        }
+
+        function setSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Initialize slideshow
+        showSlide(currentSlideIndex);
+    </script>
+
+    <div class="footer">
+        <p>&copy; Syracuse University 2024</p>
+    </div>
+</body>
+</html>

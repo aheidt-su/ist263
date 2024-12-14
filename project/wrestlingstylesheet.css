@@ -106,6 +106,9 @@ body {
     margin: 0;
     font-size: 1.5rem;
 }
+html, body {
+    overflow-x: hidden;
+}
 .navbar {
     display: flex;
     justify-content: center;
@@ -141,6 +144,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
+
 .roster-member {
     text-align: center;
     background-color: #f0d079;
@@ -300,6 +304,19 @@ h1, h2 {
     font-family: "DM Serif Text", serif;
     font-weight: 400;
     font-style: normal;}
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
 
 @media only screen and (max-width: 800px) {
         .navbar {
