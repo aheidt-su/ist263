@@ -60,6 +60,24 @@
             <p>
                 Interested in joining? Reach out to us via email or message us on Instagram at @syracuseuwrestling! Or, navigate to the <a href="https://aheidt-su.github.io/ist263/project/contact.html">contact</a> page and fill out the form, make sure to leave a good email to reach you
             </p>
+            <div class="calendar-container" aria-label="Event Calendar">
+                <h3 tabindex="0">Upcoming Events</h3>
+                <div id="calendar-header" aria-live="polite">
+                    <span id="calendar-month"></span>
+                </div>
+                <div id="calendar-days" aria-hidden="true">
+                    <div class="calendar-day-title" aria-hidden="true">Sun</div>
+                    <div class="calendar-day-title" aria-hidden="true">Mon</div>
+                    <div class="calendar-day-title" aria-hidden="true">Tue</div>
+                    <div class="calendar-day-title" aria-hidden="true">Wed</div>
+                    <div class="calendar-day-title" aria-hidden="true">Thu</div>
+                    <div class="calendar-day-title" aria-hidden="true">Fri</div>
+                    <div class="calendar-day-title" aria-hidden="true">Sat</div>
+                </div>
+                <div id="calendar"></div>
+            </div>
+            
+            </div>
         </div>
     </div>
 
@@ -67,6 +85,45 @@
         <hr>
         <p>&copy; Syracuse University 2024</p>
     </div>
-
+    <script>
+        const events = [
+            { date: "2024-12-3", title: "Practice Session", details: "9-7pm Flanagan Gym 005" },
+            { date: "2024-12-5", title: "Practice Session", details: "9-7pm Flanagan Gym 005" },
+            { date: "2024-12-12", title: "Practice Session", details: "9-7pm Flanagan Gym 005" },
+            { date: "2024-12-20", title: "Practice Session", details: "9-7pm Flanagan Gym 005" },
+            { date: "2024-12-22", title: "Intercollegiate Match", details: "10 AM - 2 PM, Main Hall" },
+            { date: "2024-12-28", title: "Holiday Training Camp", details: "All day, Flanagan Gym 005" }
+        ];
+    
+        const renderCalendar = () => {
+            const calendar = document.getElementById("calendar");
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+    
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayBox = document.createElement("div");
+                dayBox.className = "calendar-day";
+                dayBox.innerHTML = `<strong>${day}</strong>`;
+    
+                const eventDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                const event = events.find(e => e.date === eventDate);
+                if (event) {
+                    const eventElement = document.createElement("div");
+                    eventElement.className = "calendar-event";
+                    eventElement.innerText = event.title;
+                    dayBox.appendChild(eventElement);
+    
+                    dayBox.title = event.details;
+                }
+    
+                calendar.appendChild(dayBox);
+            }
+        };
+    
+        document.addEventListener("DOMContentLoaded", renderCalendar);
+    </script>
+    
 </body>
 </html>
