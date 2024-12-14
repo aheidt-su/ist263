@@ -128,11 +128,11 @@ html, body {
     margin-top: 20px;
     color: #333;
 }
-.roster-title h2 {
+.roster-title h1 {
     margin: 0;
     font-size: 1.8rem;
 }
-.roster-title h3 {
+.roster-title h2 {
     margin: 5px 0;
     font-size: 1.2rem;
 }
