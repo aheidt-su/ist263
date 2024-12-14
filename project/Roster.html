@@ -16,7 +16,7 @@
 <header>
     <a href="#main" class="skip">Skip to main content</a>
 </header>
-<body>
+<body class="fade-in>
 
     <div class="header">
         <img src="headerimage.png" alt="Club Wrestling Logo" class="header-logo">
@@ -107,6 +107,31 @@
     <div class="footer">
         <p>&copy; Syracuse University 2024</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.navbar a');
+            const body = document.body;
+    
+            // Add fade-in class on page load
+            body.classList.add('fade-in');
+    
+            links.forEach(link => {
+                link.addEventListener('click', event => {
+                    event.preventDefault();
+                    const href = link.getAttribute('href');
+    
+                    // Add fade-out class
+                    body.classList.add('fade-out');
+    
+                    // Redirect after animation
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

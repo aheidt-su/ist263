@@ -318,6 +318,15 @@ h1, h2 {
   height: auto;
 }
 
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
 @media only screen and (max-width: 800px) {
         .navbar {
             flex-direction: column;
@@ -378,7 +387,6 @@ h1, h2 {
             border: none;
             cursor: pointer;
         }
-    }
 
         .contact-info {
             width: 100%;
