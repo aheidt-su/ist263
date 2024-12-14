@@ -248,11 +248,13 @@ body {
     border-radius: 8px;
     color: white;
 }
-.contact-form h3 {
+.contact-form h2 {
     margin-top: 0;
+    color: black;
 }
 .contact-form label {
     display: block;
+    color: black;
     margin: 10px 0 5px;
 }
 .contact-form input,
