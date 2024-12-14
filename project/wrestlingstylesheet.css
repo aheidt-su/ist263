@@ -69,12 +69,16 @@ body {
 .image-gallery img {
     width: 100%;
     height: auto;
+    margin-bottom: 20px;
 }
 .welcome-section {
     flex: 2;
     padding: 20px;
     background-color: #f0f0f0;
     color: #333;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
 }
 .footer {
     background-color: #001e6c;
